@@ -1,6 +1,10 @@
 set nocompatible
 set t_Co=256
+call pathogen#infect()
 syntax on
+filetype plugin indent on
+
+set mouse=a
 
 set cf  " Enable error files & error jumping.
 set clipboard+=unnamed  " Yanks go on clipboard instead.
@@ -15,14 +19,14 @@ colors railscasts
 " colorscheme vividchalk  " Uncomment this to set a default theme
  
 " Formatting (some of these are for coding in C and C++)
-set ts=2  " Tabs are 2 spaces
+set ts=4  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
-set shiftwidth=2  " Tabs under smart indent
+set shiftwidth=4  " Tabs under smart indent
 set nocp incsearch
 set cinoptions=:0,p0,t0
 set cinwords=if,else,while,do,for,switch,case
 set formatoptions=tcqr
-set cindent
+" set cindent
 set autoindent
 set smarttab
 set noexpandtab
