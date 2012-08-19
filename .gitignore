@@ -1,2 +1,3 @@
-.vim/.netrwhist
-.vim/.netrwhist~
+.netrwhist
+.netrwhist~
+.DS_STORE
