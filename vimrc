@@ -65,3 +65,4 @@ vnoremap <Down> gj
 vnoremap <Up> gk
 inoremap <Down> <C-o>gj
 inoremap <Up> <C-o>gk
+map <F2> :NERDTreeToggle<CR>
