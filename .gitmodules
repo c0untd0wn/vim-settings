@@ -4,3 +4,6 @@
 [submodule "nerdtree"]
 	path = bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
+[submodule "vim-scala"]
+	path = bundle/vim-scala
+	url = git://github.com/ornicar/vim-scala.git
