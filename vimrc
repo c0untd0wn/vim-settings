@@ -55,16 +55,24 @@ function! InsertTabWrapper()
   endif
 endfunction
 
-nnoremap j gj
-nnoremap k gk
-vnoremap j gj
-vnoremap k gk
-nnoremap <Down> gj
-nnoremap <Up> gk
-vnoremap <Down> gj
-vnoremap <Up> gk
-inoremap <Down> <C-o>gj
-inoremap <Up> <C-o>gk
+"nnoremap j gj
+"nnoremap k gk
+"vnoremap j gj
+"vnoremap k gk
+"nnoremap <Down> gj
+"nnoremap <Up> gk
+"vnoremap <Down> gj
+"vnoremap <Up> gk
+"inoremap <Down> <C-o>gj
+"inoremap <Up> <C-o>gk
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 map <F2> :NERDTreeToggle<CR>
 map <F5> :Make<CR><C-w><Up>
 " Automatically open, but do not go to (if there are errors) the quickfix /
@@ -77,3 +85,4 @@ map <F5> :Make<CR><C-w><Up>
 " seem to happen.
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
+autocmd BufReadPost * :DetectIndent
