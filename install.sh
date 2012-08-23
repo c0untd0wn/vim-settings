@@ -1,5 +1,6 @@
-echo "Copying other folders"
-cp -R * ~/.vim
 echo "Copying .vimrc"
-cp ~/.vim/vimrc ~/.vimrc
+cp vimrc ~/.vimrc
 
+echo "Copying other folders"
+mkdir -p ~/.vim
+rsync -rv --exclude=.git * ~/.vim 
