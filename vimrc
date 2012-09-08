@@ -16,7 +16,7 @@ set nu  " Line numbers on
 " set nowrap  " Line wrapping off
 set wrap " Line wrapping on
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colors railscasts
+colors jellybeans
 " colorscheme vividchalk  " Uncomment this to set a default theme
  
 " Formatting (some of these are for coding in C and C++)
