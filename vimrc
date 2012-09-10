@@ -4,6 +4,16 @@ runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 syntax on
 filetype plugin indent on
+if has('gui_running')
+  set background=light
+  colorscheme solarized
+  set guifont=Monaco:h13
+  set guioptions-=T
+else
+  colorscheme jellybeans
+endif
+" colors jellybeans
+" colorscheme vividchalk  " Uncomment this to set a default theme
 
 set mouse=a
 
@@ -16,9 +26,7 @@ set nu  " Line numbers on
 " set nowrap  " Line wrapping off
 set wrap " Line wrapping on
 set timeoutlen=250  " Time to wait after ESC (default causes an annoying delay)
-colors jellybeans
-" colorscheme vividchalk  " Uncomment this to set a default theme
- 
+
 " Formatting (some of these are for coding in C and C++)
 set ts=2  " Tabs are 2 spaces
 set bs=2  " Backspace over everything in insert mode
@@ -86,3 +94,9 @@ map <F5> :Make<CR><C-w><Up>
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
 autocmd BufReadPost * :DetectIndent
+
+function! s:setupMarkup()
+  nnoremap <leader>p :silent !open -a Marked.app '%:p'<cr>
+endfunction
+
+au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
