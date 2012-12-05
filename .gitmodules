@@ -40,3 +40,21 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = git://github.com/ornicar/vim-scala.git
+[submodule "bundle/jellybeans"]
+	path = bundle/jellybeans
+	url = https://github.com/nanotech/jellybeans.vim
+[submodule "bundle/hybrid"]
+	path = bundle/hybrid
+	url = https://github.com/w0ng/vim-hybrid
+[submodule "bundle/distinguished"]
+	path = bundle/distinguished
+	url = git://github.com/Lokaltog/vim-distinguished.git
+[submodule "bundle/vim-racket"]
+	path = bundle/vim-racket
+	url = git://github.com/wlangstroth/vim-racket.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = git://github.com/msanders/snipmate.vim.git
