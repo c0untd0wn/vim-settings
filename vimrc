@@ -5,8 +5,9 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 if has('gui_running')
-  set background=light
-  colorscheme solarized
+  "set background=light
+  "colorscheme solarized
+  colors molokai
   set guifont=Monaco:h13
   set guioptions-=T
 else
@@ -39,13 +40,16 @@ set formatoptions=tcqr
 set autoindent
 set smarttab
 set noexpandtab
- 
+
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
 set list
 " Show $ at end of line and trailing space as ~
-set lcs=tab:\ \ ,eol:$,trail:~,extends:>,precedes:<
+" set lcs=tab:\ \ ,extends:>,precedes:<
+" highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+set listchars=tab:»·,trail:·
+hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -63,10 +67,10 @@ function! InsertTabWrapper()
   endif
 endfunction
 
-"nnoremap j gj
-"nnoremap k gk
-"vnoremap j gj
-"vnoremap k gk
+nnoremap j gj
+nnoremap k gk
+vnoremap j gj
+vnoremap k gk
 "nnoremap <Down> gj
 "nnoremap <Up> gk
 "vnoremap <Down> gj
