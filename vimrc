@@ -7,7 +7,7 @@ filetype plugin indent on
 if has('gui_running')
   "set background=light
   "colorscheme solarized
-  colors molokai
+  colors monokai
   set guifont=Monaco:h13
   set guioptions-=T
   set linespace=2
