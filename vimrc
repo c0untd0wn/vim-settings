@@ -10,6 +10,7 @@ if has('gui_running')
   colors molokai
   set guifont=Monaco:h13
   set guioptions-=T
+  set linespace=2
 else
   colorscheme jellybeans
 endif
