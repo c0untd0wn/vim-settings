@@ -105,3 +105,5 @@ function! s:setupMarkup()
 endfunction
 
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
+
+set hidden
