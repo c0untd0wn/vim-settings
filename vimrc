@@ -5,17 +5,15 @@ call pathogen#infect()
 syntax on
 filetype plugin indent on
 if has('gui_running')
-  "set background=light
-  "colorscheme solarized
-  colors monokai
   set guifont=Monaco:h13
   set guioptions-=T
   set linespace=2
 else
-  colorscheme jellybeans
+  " do nothing
 endif
-" colors jellybeans
-" colorscheme vividchalk  " Uncomment this to set a default theme
+
+set background=dark
+colorscheme solarized
 
 set mouse=a
 
@@ -40,7 +38,7 @@ set formatoptions=tcqr
 " set cindent
 set autoindent
 set smarttab
-set noexpandtab
+set expandtab
 
 " Visual
 set showmatch  " Show matching brackets.
@@ -107,3 +105,7 @@ endfunction
 au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 set hidden
+
+" Shortcut for FuzzyFincer
+"map <leader>ff :FufCoverageFile<cr>
+map <leader>ff :FufFile **/<cr>
