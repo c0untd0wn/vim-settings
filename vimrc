@@ -109,3 +109,4 @@ set hidden
 " Shortcut for FuzzyFincer
 "map <leader>ff :FufCoverageFile<cr>
 map <leader>ff :FufFile **/<cr>
+map <leader>fb :FufBuffer <cr>
