@@ -1,7 +1,39 @@
+call plug#begin('~/.vim/plugged')
+
+" Colorschemes
+Plug 'flazz/vim-colorschemes'
+
+" File handling
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
+Plug 'vim-scripts/L9' | Plug 'vim-scripts/FuzzyFinder'
+
+" Git support
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-fugitive'
+
+" Language support
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'vim-ruby/vim-ruby', { 'for': 'rb' }
+Plug 'pangloss/vim-javascript', { 'for': 'js' }
+Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
+Plug 'wlangstroth/vim-racket', { 'for': 'rkt' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+
+" Snippets
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+" (Optional)
+Plug 'honza/vim-snippets'
+
+" Autocompletion
+Plug 'othree/vim-autocomplpop'
+
+call plug#end()
+
 set nocompatible
 set t_Co=256
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
 syntax on
 filetype plugin indent on
 if has('gui_running')
@@ -96,7 +128,7 @@ map <F5> :Make<CR><C-w><Up>
 " seem to happen.
 autocmd QuickFixCmdPost [^l]* nested cwindow
 autocmd QuickFixCmdPost    l* nested lwindow
-autocmd BufReadPost * :DetectIndent
+" autocmd BufReadPost * :DetectIndent
 
 function! s:setupMarkup()
   nnoremap <leader>p :silent !open -a Marked.app '%:p'<cr>
