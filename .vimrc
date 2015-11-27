@@ -19,6 +19,10 @@ Plug 'pangloss/vim-javascript', { 'for': 'js' }
 Plug 'tpope/vim-markdown', { 'for': ['md', 'markdown'] }
 Plug 'wlangstroth/vim-racket', { 'for': 'rkt' }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'othree/html5.vim', { 'for': 'html' }
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+Plug 'klen/python-mode', { 'for': 'py' }
+Plug 'ap/vim-css-color'
 
 " Snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -29,6 +33,10 @@ Plug 'honza/vim-snippets'
 
 " Autocompletion
 Plug 'othree/vim-autocomplpop'
+
+Plug 'tpope/vim-sensible'
+Plug 'Yggdroot/indentLine'
+Plug 'mhinz/vim-startify'
 
 call plug#end()
 
@@ -44,8 +52,8 @@ else
   " do nothing
 endif
 
-set background=dark
-colorscheme solarized
+" set background=dark
+colorscheme jellybeans
 
 set mouse=a
 
@@ -75,12 +83,12 @@ set expandtab
 " Visual
 set showmatch  " Show matching brackets.
 set mat=5  " Bracket blinking.
-set list
+" set list
 " Show $ at end of line and trailing space as ~
 " set lcs=tab:\ \ ,extends:>,precedes:<
 " highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
-set listchars=tab:»·,trail:·
-hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
+" set listchars=tab:»·,trail:·
+" hi SpecialKey ctermbg=red ctermfg=red guibg=red guifg=red
 set novisualbell  " No blinking .
 set noerrorbells  " No noise.
 set laststatus=2  " Always show status line.
@@ -118,23 +126,6 @@ imap <left> <nop>
 imap <right> <nop>
 map <F2> :NERDTreeToggle<CR>
 map <F5> :Make<CR><C-w><Up>
-" Automatically open, but do not go to (if there are errors) the quickfix /
-" location list window, or close it when is has become empty.
-"
-" Note: Must allow nesting of autocmds to enable any customizations for quickfix
-" buffers.
-" Note: Normally, :cwindow jumps to the quickfix window if the command opens it
-" (but not if it's already open). However, as part of the autocmd, this doesn't
-" seem to happen.
-autocmd QuickFixCmdPost [^l]* nested cwindow
-autocmd QuickFixCmdPost    l* nested lwindow
-" autocmd BufReadPost * :DetectIndent
-
-function! s:setupMarkup()
-  nnoremap <leader>p :silent !open -a Marked.app '%:p'<cr>
-endfunction
-
-au BufRead,BufNewFile *.{md,markdown,mdown,mkd,mkdn} call s:setupMarkup()
 
 set hidden
 
